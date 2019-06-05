@@ -34,5 +34,10 @@ public class TestController {
 
  }
 
+    @RequestMapping("/hello")
+    public String helloHtml(){
+        return"/index";
+    }
+
 
 }
