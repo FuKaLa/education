@@ -4,7 +4,6 @@ import com.example.education.entity.UserIO;
 import com.example.education.service.LoginService;
 import com.example.education.utils.R;
 import com.example.education.utils.Tool;
-import org.apache.catalina.User;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
