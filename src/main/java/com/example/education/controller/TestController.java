@@ -13,12 +13,6 @@ import java.util.HashMap;
 //@RequestMapping("/test")
 public class TestController {
 
-    @RequestMapping("/test")
-    public String testAsd(HashMap<String, Object> map){
-        map.put("hello", "欢迎进入HTML页面");
-        return "index";
-    }
-
     @RequestMapping("/Hi")
      public ModelAndView sayHello() {
 

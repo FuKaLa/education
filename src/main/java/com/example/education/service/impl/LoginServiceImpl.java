@@ -26,4 +26,11 @@ public class LoginServiceImpl implements LoginService{
     public int checkUser(UserIO user) {
         return loginDao.checkUser(user);
     }
+
+    @Override
+    public int save(UserIO userIO) {
+        return loginDao.save(userIO);
+    }
+
+
 }

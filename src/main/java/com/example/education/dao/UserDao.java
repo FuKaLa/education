@@ -15,4 +15,6 @@ public interface UserDao {
         int existUser(UserIO user);
 
         int checkUser(UserIO user);
+
+        int save(UserIO userIO);
 }

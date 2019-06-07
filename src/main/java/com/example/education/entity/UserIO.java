@@ -1,6 +1,7 @@
 package com.example.education.entity;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * Created by Administrator on 2019/6/5.
@@ -8,12 +9,36 @@ import java.io.Serializable;
 public class UserIO implements Serializable {
 
     private Integer id ;
-    private String  userName;
+    private String userName;
     private String password;
     private String sex;
     private String realName;
     private Integer age;
     private Integer roleId;
+    private String number;
+    private String city;
+    private String school;
+    private String college;
+    private String major;
+    private String clazz;
+    private Date createTime;
+    private Date updateTime;
+
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
+
+    public Date getUpdateTime() {
+        return updateTime;
+    }
+
+    public void setUpdateTime(Date updateTime) {
+        this.updateTime = updateTime;
+    }
 
     public Integer getId() {
         return id;
@@ -69,5 +94,53 @@ public class UserIO implements Serializable {
 
     public void setRoleId(Integer roleId) {
         this.roleId = roleId;
+    }
+
+    public String getNumber() {
+        return number;
+    }
+
+    public void setNumber(String number) {
+        this.number = number;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getSchool() {
+        return school;
+    }
+
+    public void setSchool(String school) {
+        this.school = school;
+    }
+
+    public String getCollege() {
+        return college;
+    }
+
+    public void setCollege(String college) {
+        this.college = college;
+    }
+
+    public String getMajor() {
+        return major;
+    }
+
+    public void setMajor(String major) {
+        this.major = major;
+    }
+
+    public String getClazz() {
+        return clazz;
+    }
+
+    public void setClazz(String clazz) {
+        this.clazz = clazz;
     }
 }

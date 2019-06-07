@@ -2,9 +2,9 @@ package com.example.education.controller;
 
 import com.example.education.pojo.KeyStrValInt;
 import com.example.education.utils.CreateModel;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,8 +13,10 @@ import java.util.List;
  * Created by Administrator on 2019/6/5.
  * 教学分析
  */
+@CrossOrigin
 @Controller
 public class TeachingController {
+
 
     /**
      * 课程导向

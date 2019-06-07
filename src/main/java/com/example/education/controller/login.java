@@ -7,13 +7,21 @@ import com.example.education.utils.Tool;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 /**
  * Created by Administrator on 2019/6/5.
  */
+@CrossOrigin
+//@CrossOrigin(origins = "http://192.168.1.114:8080", maxAge = 3600)
 @Controller
 public class login {
 
@@ -22,7 +30,8 @@ public class login {
 
     @ResponseBody
     @RequestMapping("/login")
-    public R checkUser(@RequestBody UserIO user){
+    public R checkUser(@RequestBody UserIO user, HttpServletRequest request, HttpServletResponse response){
+
         if(StringUtils.isNotEmpty(user.getUserName()) && StringUtils.isNotEmpty(user.getPassword())
                 && user.getRoleId() != null){
             user.setPassword(Tool.MD5(user.getPassword()));
@@ -38,4 +47,28 @@ public class login {
         }
         return R.ok();
     }
+
+    /**
+     * 用户注册
+     * @param user
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping("/sign")
+    public R save(@RequestBody UserIO user){
+            //判断用户是否存在
+            if(loginService.existUser(user)>0){
+                return R.error("用户名已经存在");
+            }
+            user.setPassword(Tool.MD5(user.getPassword()));
+            Date date = new Date();
+//        SimpleDateFormat dateFormat= new SimpleDateFormat("yyyy-MM-dd :hh:mm:ss");
+//        System.out.println(dateFormat.format(date));
+            user.setCreateTime(date);
+            if(loginService.save(user)>0){
+                return R.ok();
+            }
+        return R.error();
+    }
+
 }
