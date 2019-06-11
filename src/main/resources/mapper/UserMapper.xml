@@ -4,11 +4,11 @@
 <mapper namespace="com.example.education.dao.UserDao">
 
 	<select id="checkUser" resultType="int" parameterType="com.example.education.entity.UserIO">
-		select count(1) FROM user  WHERE username = #{userName}
+		select count(1) FROM user  WHERE username = #{userName}  AND password = #{password} AND role_id = #{roleId}
 	</select>
 
 	<select id="existUser" resultType="int" parameterType="com.example.education.entity.UserIO">
-		select count(1) FROM user  WHERE username = #{userName} AND password = #{password} AND role_id = #{roleId}
+		select count(1) FROM user  WHERE username = #{userName}
 	</select>
 
 	<insert id="save" parameterType="com.example.education.entity.UserIO">
