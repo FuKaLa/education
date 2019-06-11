@@ -30,7 +30,7 @@ public class TeachingController {
         result1.add(CreateModel.createKeyStrValInt("云计算", Integer.valueOf(84)));
         result1.add(CreateModel.createKeyStrValInt("大数据", Integer.valueOf(96)));
         result1.add(CreateModel.createKeyStrValInt("后端开发", Integer.valueOf(84)));
-        result1.add(CreateModel.createKeyStrValInt("前段设计", Integer.valueOf(79)));
+        result1.add(CreateModel.createKeyStrValInt("前端设计", Integer.valueOf(79)));
         result1.add(CreateModel.createKeyStrValInt("网络工程", Integer.valueOf(78)));
         result1.add(CreateModel.createKeyStrValInt("人工智能", Integer.valueOf(90)));
 
@@ -75,7 +75,7 @@ public class TeachingController {
         result1.add(CreateModel.createKeyStrValDouble("云计算", Double.valueOf(20.8)));
         result1.add(CreateModel.createKeyStrValDouble("大数据", Double.valueOf(30.6)));
         result1.add(CreateModel.createKeyStrValDouble("后端开发", Double.valueOf(50.9)));
-        result1.add(CreateModel.createKeyStrValDouble("前段设计", Double.valueOf(60.5)));
+        result1.add(CreateModel.createKeyStrValDouble("前端设计", Double.valueOf(60.5)));
         result1.add(CreateModel.createKeyStrValDouble("网络工程", Double.valueOf(45.9)));
         result1.add(CreateModel.createKeyStrValDouble("人工智能", Double.valueOf(35.9)));
 
@@ -119,7 +119,7 @@ public class TeachingController {
         result1.add(CreateModel.createKeyStrValDouble("云计算", Double.valueOf(79.8)));
         result1.add(CreateModel.createKeyStrValDouble("大数据", Double.valueOf(70.6)));
         result1.add(CreateModel.createKeyStrValDouble("后端开发", Double.valueOf(68.9)));
-        result1.add(CreateModel.createKeyStrValDouble("前段设计", Double.valueOf(88.5)));
+        result1.add(CreateModel.createKeyStrValDouble("前端设计", Double.valueOf(88.5)));
         result1.add(CreateModel.createKeyStrValDouble("网络工程", Double.valueOf(67.9)));
         result1.add(CreateModel.createKeyStrValDouble("人工智能", Double.valueOf(65.9)));
 

@@ -23,6 +23,11 @@ public class LoginServiceImpl implements LoginService{
     }
 
     @Override
+    public int checkRole(String username, Integer roleId) {
+        return loginDao.checkRole(username,roleId);
+    }
+
+    @Override
     public int checkUser(UserIO user) {
         return loginDao.checkUser(user);
     }

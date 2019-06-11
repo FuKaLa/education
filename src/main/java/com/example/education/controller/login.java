@@ -39,6 +39,10 @@ public class login {
             if(loginService.existUser(user)<1){
                 return R.error("用户不存在");
             }
+            //判断角色是否正确
+            if(loginService.checkRole(user.getUserName(),user.getRoleId())<1){
+                return R.error("用户角色不正确");
+            }
             if(loginService.checkUser(user)<1){
                 return R.error("用户密码不正确");
             }

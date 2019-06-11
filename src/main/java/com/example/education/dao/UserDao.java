@@ -3,6 +3,7 @@ package com.example.education.dao;
 import com.example.education.entity.UserIO;
 import org.apache.catalina.User;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -17,4 +18,6 @@ public interface UserDao {
         int checkUser(UserIO user);
 
         int save(UserIO userIO);
+
+        int checkRole(@Param("username") String username,@Param("roleId") Integer roleId);
 }

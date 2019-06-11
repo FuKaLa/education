@@ -11,6 +11,8 @@ public interface LoginService {
 
    int  existUser(UserIO user);
 
+   int checkRole(String username,Integer roleId);
+
    int checkUser(UserIO user);
 
    int save(UserIO userIO);
